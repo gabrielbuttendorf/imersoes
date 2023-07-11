@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Alura - Conversor de Medidas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    <section id="section-main">
+        <div class="div-btn-theme">
+            <p class="p-theme">Modo Escuro</p>
+            <input type="checkbox" class="on-off-checkbox" name="btn-theme" id="btn-theme">
+            <label for="btn-theme" class="on-off-button"></label>
+        </div>
+        <div class="container">
+            <h1 class="page-title">Conversor de Medidas</h1>
+            <p class="page-subtitle">Escolha o que você deseja converter:</p>
+            <div class="buttons">
+                <button class="btntemp" onclick="ExibeTemperatura()">Temperatura</button>
+                <button class="btnmoed" onclick="ExibeMoeda()">Moeda</button>
+                <button class="btncomp" onclick="ExibeComprimento()">Comprimento</button>
+            </div>
+            <div class="interaction">
+                <div id="input-val">
+                    <input id="valor" type="number" name="valor" id="valor" placeholder="Digite aqui">
+                </div>
+                <select name="select01" id="select01">
+                    <option value=""></option>
+                </select>
+                <span>para</span>
+                <select name="select02" id="select02">
+                    <option value=""></option>
+                </select>
+                <div>
+                    <button id="convert" onclick="Converter()" disabled>Converter</button>
+                    <p id="result">Preencha os campos acima para converter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <img src="image/logo-imersaodev.svg" class="imersao-logo" alt="Logo Imersão Dev">
+        <a href="https://alura.com.br/" target="_blank" rel="external">
+            <img src="image/alura-logo.svg" alt="" class="alura-logo">
+        </a>
+        <p class="reload"><a href="" onclick="Reload()">Reload</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

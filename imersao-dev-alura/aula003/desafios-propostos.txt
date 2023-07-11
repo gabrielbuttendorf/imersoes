@@ -1,0 +1,4 @@
+Desafios da Aula 03
+
+- Adicionar tentativas [OK]
+- Dar dicas quando errar, dizendo se é maior ou menor [OK]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Alura - Calculadora de média</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="page-title">Calculadora de média</h1>
+    <div class="container">
+        <p class="page-subtitle">Calcule suas médias!</p>
+        <p class="p-input">
+            <input class="input-nota" type="number" name="nota" id="nota" placeholder="Digite a nota" min="0" max="10">
+        </p>
+        <div class="-div-buttons">
+            <input type="button" value="Adicionar Nota" onclick="AdicionarNota()">
+            <input type="button" value="Calcular Média" onclick="CalcularMedia()">
+        </div>
+        <div class="notas-inseridas"></div>
+        <div class="div-resultado">
+            <p class="resultado" id="media-final"></p>
+            <p class="resultado" id="situacao"></p>
+        </div>
+    </div>
+    <footer>
+        <img src="image/logo-imersaodev.svg" class="imersao-logo" alt="Logo Imersão Dev">
+        <a href="https://alura.com.br/" target="_blank" rel="external">
+            <img src="image/alura-logo.svg" alt="" class="alura-logo">
+        </a>
+        <p class="reload"><a href="" onclick="Reload()">Reload</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

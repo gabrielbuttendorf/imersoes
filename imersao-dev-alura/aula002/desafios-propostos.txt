@@ -1,0 +1,5 @@
+Desafios da Aula 02
+
+- Converter para várias moedas e bitcoin [OK]
+- Conversor de km para anos-luz [OK]
+- Conversor de temperaturas [OK]

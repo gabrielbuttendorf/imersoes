@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Alura - Brasileirão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="page-title">Tabela Brasileirão 2023</h1>
+    <div class="form">
+        <div class="div-input">
+            <label for="time-casa">Time Casa:</label>
+            <input type="text" name="time-casa" id="time-casa" placeholder="Digite aqui">
+        </div>
+        <div class="div-input">
+            <label for="time-fora">Time Fora:</label>
+            <input type="text" name="time-fora" id="time-fora" placeholder="Digite aqui">
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="add-partida" onclick="AdicionarPartida()">Adicionar Partida</button>
+        <p class="p-question">Quem ganhou esta partida?</p>
+        <button class="vencedor" id="btn-time-casa" onclick="DefinirVencedor()" disabled>Time Casa</button>
+        <button class="vencedor" id="btn-empate" onclick="DefinirVencedor()" disabled>Empate</button>
+        <button class="vencedor" id="btn-time-fora" onclick="DefinirVencedor()" disabled>Time Fora</button>
+    </div>
+    <table>
+        <thead>
+            <th>Time</th>
+            <th>Pontos</th>
+            <th>Jogos</th>
+            <th>Vitórias</th>
+            <th>Derrotas</th>
+            <th>Empates</th>
+        </thead>
+        <tbody id="tabela">
+            <!-- <tr>
+                <td class="time">
+                    <img class="escudo-time" src="escudos/escudo-flamengo.png" alt="">
+                    Flamengo
+                </td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+            </tr> -->
+        </tbody>
+    </table>
+    <div class="div-zerar">
+        <button onclick="ZerarTabela()">Zerar Tabela</button>
+    </div>
+    <footer>
+        <div>
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+            <a href="https://alura.com.br/" target="_blank" rel="external">
+                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+            </a>
+        </div>
+        <p>
+            <a href="https://www.instagram.com/bieel.felipe_/" target="_blank">bieel.felipe</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Desafios da Aula 01
+
+- Calcular a média e imprimir se o aluno foi aprovado ou não [OK]
+- Estilizar a página [OK]
+- Inserir o conteúdo ná página com JS [OK]
+- Conversor de temperaturas, moeda, km [OK]
+- Fazer toda a conta das notas dentro do console.log() [OK]

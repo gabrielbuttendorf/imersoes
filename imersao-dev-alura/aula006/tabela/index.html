@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Alura - Tabela</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <h1 class="page-title">Tabela de Classificação</h1>
+        <div class="form">
+            <p>Insira o nome do jogador:</p>
+            <input type="text" name="input-nome" id="input-nome" placeholder="Digite aqui">
+            <p>Insira a URL da foto do jogador:</p>
+            <input type="text" name="input-foto" id="input-foto" placeholder="Digite aqui">
+            <button onclick="AdicionarJogador()">Adicionar Novo Jogador</button>
+        </div>
+        <div class="div-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Nome</th>
+                        <th>Vitórias</th>
+                        <th>Empates</th>
+                        <th>Derrotas</th>
+                        <th>Pontos</th>
+                        <th colspan="3">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-jogadores">
+                    <!-- <tr>
+                        <td>Paulo</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button onClick="AdicionarVitoria()">Vitória</button></td>
+                        <td><button onClick="AdicionarEmpate()">Empate</button></td>
+                        <td><button onClick="AdicionarDerrota()">Derrota</button></td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+        <div class="div-zerar">
+            <button onclick="ZerarTabela()">Zerar Tabela</button>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-mentalista.svg" class="page-logo" alt="">
+            <a href="https://alura.com.br/" target="_blank">
+                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+            </a>
+        </div>
+        <p>
+            <a href="" onclick="Reload()">
+                <svg  fill="#ffffff" height="200px" width="200px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 489.533 489.533" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M268.175,488.161c98.2-11,176.9-89.5,188.1-187.7c14.7-128.4-85.1-237.7-210.2-239.1v-57.6c0-3.2-4-4.9-6.7-2.9 l-118.6,87.1c-2,1.5-2,4.4,0,5.9l118.6,87.1c2.7,2,6.7,0.2,6.7-2.9v-57.5c87.9,1.4,158.3,76.2,152.3,165.6 c-5.1,76.9-67.8,139.3-144.7,144.2c-81.5,5.2-150.8-53-163.2-130c-2.3-14.3-14.8-24.7-29.2-24.7c-17.9,0-31.9,15.9-29.1,33.6 C49.575,418.961,150.875,501.261,268.175,488.161z"></path> </g> </g></svg>
+            </a>
+            <a class="meu-instagram" href="https://www.instagram.com/bieel.felipe_/" target="_blank" rel="external">@bieel.felipe_</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

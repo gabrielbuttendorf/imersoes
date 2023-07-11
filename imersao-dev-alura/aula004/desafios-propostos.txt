@@ -1,0 +1,5 @@
+Desafios da Aula 04
+
+- Pesquisar outros tipos de for [OK]
+- Inserir filmes através do input [OK]
+- Evitar filmes repetidos [OK]

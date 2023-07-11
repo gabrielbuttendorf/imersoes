@@ -1,0 +1,258 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* cores do modo claro */
+    --light01: #659BF7;
+    --light02: #1B6BF5;
+    --light03: #296ec2;
+    --light04: #264975;
+
+    /* cores do modo escuro */
+    --dark01: #034596;
+    --dark02: #0459C2;
+    --dark03: #203E63;
+    --dark04: #01224A;
+    --grey : #2f3a47;
+}
+
+.light-theme {
+    --bodyBackground: linear-gradient(180deg, var(--light01), var(--light03)) fixed;
+    --corTexto: var(--light04);
+    --containerBackground: #ffffff;
+    --pageTitleColor: var(--light02);
+    --buttonBackground: var(--light01);
+    --buttonTextColor: #ffffff;
+    --buttonBackgroundHover: var(--light02);
+    --reloadTextColor: var(--light04);
+}
+.dark-theme {
+    --bodyBackground: linear-gradient(180deg, var(--dark03), var(--grey)) fixed;
+    --corTexto: var(--light01);
+    /* --corTexto: #ffffff; */
+    --containerBackground: var(--grey);
+    --pageTitleColor: var(--light02);
+    --buttonTextColor: #ffffff;
+    --buttonBackground: #03459660;
+    --buttonBackgroundHover: var(--dark02);
+    --input-selectBackground: #03459686;
+    --input-selectTextColor: #c7dcff;
+    --placeholderTextColor: #ffffffbb;
+    --optionBackground: #1E3E64;
+    --reloadTextColor: var(--light03);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--corTexto);
+    background: var(--bodyBackground);
+    margin-top: 10vh;
+}
+
+#section-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    background-color: var(--containerBackground);
+    text-align: center;
+    width: 70vw;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 7px #00000057;
+}
+
+.div-btn-theme {
+    width: 70vw;
+    display: flex;
+    padding: 0px 0px 10px 5px;
+}
+
+.p-theme{ color: #ffffff; }
+
+.on-off-checkbox {
+    position: absolute;
+    left: -9999px;
+}
+
+.on-off-button {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    cursor: pointer;
+}
+
+.on-off-button::before,
+.on-off-button::after {
+    content: '';
+    margin-left: 10px;
+    transition: 0.3s ease;
+}
+
+.on-off-button::before {
+    display: inline-block;
+    width: 2.3em;
+    height: 1.3em;
+    background-color: var(--light04);
+    border-radius: 1em;
+}
+
+.on-off-button::after {
+    position: absolute;
+    top: 0.085em;
+    left: 0.085em;
+    width: 1.10em;
+    height: 1.10em;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.on-off-checkbox:checked + .on-off-button::before {
+    background-color: var(--light02);
+}
+
+.on-off-checkbox:checked + .on-off-button::after {
+    left: 1.085em;
+}
+
+.page-title {
+    color: var(--pageTitleColor);
+    font-size: clamp(18px, 3vw, 40px);
+}
+
+.page-subtitle, #result {
+    font-size: clamp(15px, 2vw, 22px);
+    margin-top: 5px;
+}
+
+button {
+    background-color: var(--buttonBackground);
+    color: var(--buttonTextColor);
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    transition: 0.3s;
+}
+
+button:hover, select:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--buttonBackgroundHover);
+}
+
+button:active {
+    transform: scale(96%);
+}
+
+button, input#valor, select, option {
+    font-size: clamp(15px, 1.2vw, 20px);
+    padding: clamp(6px, 1.2vw, 10px);
+    margin: 8px 4px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid var(--light03);
+}
+
+input#valor, select {
+    background-color: var(--input-selectBackground);
+    color: var(--input-selectTextColor);
+}
+
+::-webkit-input-placeholder {
+    color: var(--placeholderTextColor);
+}
+
+select, option {
+    border-radius: 0px;
+}
+
+option {
+    background-color: var(--optionBackground);
+}
+
+#result {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.imersao-logo {
+    width: 200px;
+}
+
+.alura-logo {
+    width: 50px;
+    height: 40.16px;
+    padding: 0px 5px;
+    background-color: #1058B2;
+}
+
+.reload {
+    margin-top: 10px;
+}
+
+.reload > a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.5s;
+    color: var(--reloadTextColor);
+}
+
+.reload > a:hover {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 480px) {
+    .container, .div-btn-theme {
+        width: 85vw;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    button, input#valor {
+        width: 90%;
+        border-radius: 5px;
+        margin: 8px 0px;
+    }
+
+    .interaction {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    select, input#valor {
+        width: 90%;
+    }
+
+    select {
+        margin: 5px 0px;
+    }
+
+    .imersao-logo {
+        width: 140px;
+    }
+    
+    .alura-logo {
+        width: 50px;
+        height: 28.11px;
+        padding: 0px 5px;
+        background-color: #1058B2;
+    }
+}

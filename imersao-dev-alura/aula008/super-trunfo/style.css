@@ -1,0 +1,325 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(180deg, #111111, #1a1919, #111111);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.fundo-carro {
+    position: absolute;
+    z-index: -1;
+    width: 95vw;
+    max-width: 1400px;
+    opacity: 2%;
+}
+
+.div-title {
+    margin: 25px 0px;
+}
+
+.car-title {
+    width: 36vw;
+    max-width: 500px;
+    min-width: 250px;
+}
+
+.page-title {
+    color: #ffffff;
+    font-size: clamp(30px, 6vw, 70px);
+    margin-top: -10px;
+    text-shadow: 1px 3px 1px #be952d;
+    z-index: -1;
+}
+
+#carta-jogador, #carta-computador {
+    width: 40vw;
+    max-width: 470px; 
+    height: 65vw;
+    max-height: 765px;
+    text-transform: uppercase;
+
+    background-image: url(images/cartas/modelo-carta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    position: relative;
+}
+
+#carta-jogador-img, #carta-computador-img {
+    padding-top: 16px;
+    padding-left: 18px;
+    width: 97%;
+    height: 42%;
+    z-index: -1;
+}
+
+#carta-jogador-marca, #carta-computador-marca {
+    position: absolute;
+    width: 11%;
+    top: 37.8%;
+    left: 13%;
+}
+
+#carta-jogador-title, #carta-computador-title {
+    position: absolute;
+    font-size: clamp(16px, 2.7vw, 32px);
+    font-weight: 600;
+    letter-spacing: 2px;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    color: #f1af06;
+}
+
+.carta-jogador-atributos {
+    position: absolute;
+    top: 0;
+    left: 8%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+  
+.atributo1, .atributo2, .atributo3, .atributo4  {
+    display: block;
+    position: absolute;
+    width: 10%;
+    max-width: 40px;
+    height: 3.8%; 
+    max-height: 39px;
+
+    /* referente ao label da carta computador (--) */
+    color: #ffffff;
+    font-size: clamp(12px, 2vw, 25px);
+    cursor: pointer;
+}
+
+.atributo1, .label-atributo1, .span-atributo1 { top: 60% }
+.atributo2, .label-atributo2, .span-atributo2 { top: 68% }
+.atributo3, .label-atributo3, .span-atributo3 { top: 76% }
+.atributo4, .label-atributo4, .span-atributo4 { top: 84% }
+
+.label-atributo1, .label-atributo2, .label-atributo3, .label-atributo4 {
+    position: absolute;
+    left: 10%;
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 25px);
+}
+
+.span-atributo1, .span-atributo2, .span-atributo3, .span-atributo4 {
+    position: absolute;
+    left: 22%;
+    color: #ffd770;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 25px);
+    font-weight: 600;
+}
+
+.span-atributo1 {width: 60%; text-align: right; }
+.span-atributo2 {width: 60%; text-align: right; text-transform: lowercase; }
+.span-atributo3 {width: 60%; text-align: right; text-transform: lowercase; }
+.span-atributo4 {width: 60%; text-align: right; text-transform: lowercase; }
+
+.cartas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-icone-carta {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 78vw;
+    max-width: 860px;
+}
+
+.icone-carta {
+    width: 14%;
+    max-width: 132px;
+    filter: invert(20%);
+}
+
+.span-icone {
+    position: absolute;
+    color: #ffffff;
+    font-size: clamp(12px, 2.8vw, 30px);
+    top: 28%;
+}
+
+#span-icone-jogador { left: 7.3% }
+#span-icone-computador { left: 93.3% }
+
+/* ---------------------- buttons ---------------------- */
+
+#btn-embaralhar, #btn-jogar {
+    width: 30vw;
+    max-width: 380px;
+    height: 7.5vw;
+    max-height: 60px;
+    font-size: clamp(12px, 3vw, 24px);
+    font-weight: 600;
+    background-color: #ffb700;
+    color: #000000;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+
+    transition: all 0.3s ease;
+}
+
+#btn-jogar:hover, #btn-embaralhar:hover {
+    cursor: pointer;
+    box-shadow: 0px 4px 0px #000000;
+    transform: scale(105%);
+}
+
+#btn-jogar:disabled, #btn-embaralhar:disabled  {
+    background-color: #33322f;
+    color: #272727;
+}
+
+/* --------------------------------------------------- */
+
+#div-resultado {
+    width: 70vw;
+    max-width: 850px;
+    height: 7.5vw;
+    max-height: 80px;
+    margin-bottom: 10px;
+    background-color: #ffe4a5ec;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 1;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+}
+
+#div-resultado.oculto { opacity: 0 }
+
+#resultado {
+    width: 100%;
+    font-size: clamp(14px, 3vw, 34px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+footer .page-logo { width: 200px }
+
+footer .alura-logo {
+    width: 8%;
+    padding: 6px;
+}
+
+footer > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer > p svg {
+    width: 22px;
+    height: auto;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+footer > p svg:hover {
+    cursor: pointer;
+    fill: #ffb700;
+    transform: scale(120%);
+}
+
+footer > p > a:hover { color: #ffb700; }
+
+@media screen and (max-width: 580px) {
+    .fundo-carro { width: 90vw }
+
+    .cartas { display: block }
+
+    #carta-jogador, #carta-computador {
+        width: 65vw;
+        height: 108vw;
+    }
+
+    #carta-jogador-img, #carta-computador-img {
+        padding-top: 14px;
+        padding-left: 14px;
+    }
+
+    #carta-jogador-marca, #carta-computador-marca {
+        top: 37%;
+        left: 13%;
+    }
+
+    .atributo1, .label-atributo1, .span-atributo1 { top: 58.8% }
+    .atributo2, .label-atributo2, .span-atributo2 { top: 66.7% }
+    .atributo3, .label-atributo3, .span-atributo3 { top: 74.4% }
+    .atributo4, .label-atributo4, .span-atributo4 { top: 82.3% }
+
+    .label-atributo1, .label-atributo2, .label-atributo3, .label-atributo4,
+    .span-atributo1, .span-atributo2, .span-atributo3, .span-atributo4 {
+        font-size: clamp(11px, 3.2vw, 25px);
+    }
+
+    .div-icone-carta { width: 60vw }
+    .icone-carta { width: 25% }
+    #span-icone-jogador { left: 12.8% }
+    #span-icone-computador { left: 88% }
+    
+    .span-icone {
+        font-size: clamp(11px, 4vw, 30px);
+        top: 29%;
+    }
+
+    /* ---------------------- buttons ---------------------- */
+
+    #btn-embaralhar, #btn-jogar {
+        width: 60vw;
+        height: 8.5vw;
+    }
+
+    /* --------------------------------------------------- */
+    
+    footer .page-logo { width: 120px }
+
+    footer .alura-logo {
+        width: 14%;
+        padding: 6px;
+    }
+
+    footer > p {
+        font-size: clamp(14px, 3vw, 24px);
+    }
+}

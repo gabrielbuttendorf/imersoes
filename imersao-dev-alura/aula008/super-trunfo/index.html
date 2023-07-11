@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Alura - Super Trunfo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img class="fundo-carro" src="images/fundo-carro.png" alt="">
+        <div class="div-title">
+            <img class="car-title" src="images/contorno-carro-png.png">
+            <h1 class="page-title">Super Trunfo</h1>
+        </div>
+        <button onclick="EmbaralharCartas()" id="btn-embaralhar">Embaralhar</button>
+        <button type="button" id="btn-jogar" onclick="Jogar()" disabled>Jogar</button>
+        <div id="div-resultado" class="oculto">
+            <p id="resultado"></p>
+        </div>
+        <div class="cartas">
+            <div id="carta-jogador">
+                <img src="images/cartas/fundo-carta.jpg" id="carta-jogador-img">
+                <img src="" id="carta-jogador-marca">
+                <p id="carta-jogador-title">- - - - - - - - - - - -</p>
+                <div class="carta-jogador-atributos">
+                    <input type="radio" class="atributo1" name="atributo" id="preco" value="preco"><label for="preco" class="label-atributo1">Preço</label><span class="span-atributo1">- - -</span>
+                    <input type="radio" class="atributo2" name="atributo" id="potencia" value="potencia"><label for="potencia" class="label-atributo2">Potência</label><span class="span-atributo2">- - -</span>
+                    <input type="radio" class="atributo3" name="atributo" id="aceleracao" value="aceleracao"><label for="aceleracao" class="label-atributo3">0-100 km/h</label><span class="span-atributo3">- - -</span>
+                    <input type="radio" class="atributo4" name="atributo" id="velocidade-max" value="velMax"><label for="velocidade-max" class="label-atributo4">Velocidade Máx.</label><span class="span-atributo4">- - -</span>
+                </div>
+            </div>
+            <div id="carta-computador">
+                <img src="images/cartas/fundo-carta.jpg" id="carta-computador-img">
+                <img src="" id="carta-computador-marca">
+                <p id="carta-computador-title">- - - - - - - - - - - -</p>
+                <div class="carta-jogador-atributos">
+                    <label class="atributo1">- -</label><label class="label-atributo1">Preço</label><span class="span-atributo1">- - -</span>
+                    <label class="atributo2">- -</label><label class="label-atributo2">Potência</label><span class="span-atributo2">- - -</span>
+                    <label class="atributo3">- -</label><label class="label-atributo3">0-100 km/h</label><span class="span-atributo3">- - -</span>
+                    <label class="atributo4">- -</label><label class="label-atributo4">Velocidade Máx.</label><span class="span-atributo4">- - -</span>
+                </div>
+            </div>
+        </div>
+        <div class="div-icone-carta">
+            <span id="span-icone-jogador" class="span-icone">00</span>
+            <img class="icone-carta" src="images/cartas-icone.png">
+            <span id="span-icone-computador" class="span-icone">00</span>
+            <img class="icone-carta" src="images/cartas-icone.png">
+        </div>
+    </div>
+    <footer>
+        <div>
+            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+            <a href="https://alura.com.br/" target="_blank">
+                <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+            </a>
+        </div>
+        <p>
+            <a href="" onclick="Reload()">
+                <svg  fill="#ffffff" height="200px" width="200px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 489.533 489.533" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M268.175,488.161c98.2-11,176.9-89.5,188.1-187.7c14.7-128.4-85.1-237.7-210.2-239.1v-57.6c0-3.2-4-4.9-6.7-2.9 l-118.6,87.1c-2,1.5-2,4.4,0,5.9l118.6,87.1c2.7,2,6.7,0.2,6.7-2.9v-57.5c87.9,1.4,158.3,76.2,152.3,165.6 c-5.1,76.9-67.8,139.3-144.7,144.2c-81.5,5.2-150.8-53-163.2-130c-2.3-14.3-14.8-24.7-29.2-24.7c-17.9,0-31.9,15.9-29.1,33.6 C49.575,418.961,150.875,501.261,268.175,488.161z"></path> </g> </g></svg>
+            </a>
+            <a class="meu-instagram" href="https://www.instagram.com/bieel.felipe_/" target="_blank" rel="external">@bieel.felipe_</a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Desafios Aula 07
+
+- Arrumar botão de jogar sem selecionar nenhum atributo [OK]
+- Ao sortear, aparecer a carta [OK]

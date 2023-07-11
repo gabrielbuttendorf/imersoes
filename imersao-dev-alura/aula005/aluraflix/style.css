@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    background-color: #222020;
+}
+
+.fundo {
+    position: relative;
+    background-image:linear-gradient(to bottom, #222020d0, #222020), url(images/fundo.jpg);
+    background-position: center top;
+    background-size: cover;
+    height: 250px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: inset 0 -15px 40px #1d1d1d; */
+}
+
+.page-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+    font-size: 3.8em;
+}
+
+.destaque-title {
+    color: #da1e26;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.page-subtitle {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.page-logo {
+    width: 200px;
+}
+
+.alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.form-wrapper {
+    margin: 0 0 15px;
+}
+
+.form-wrapper input {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.form-wrapper button {
+    border: 0;
+    color: #ffffff;
+    background: #da1e26;
+    font-weight: bold;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-wrapper button:hover {
+    background: #a30810;
+}
+
+#lista-filmes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.div-filme {
+    display: inline-block;
+    width: 150px;
+    margin: 10px;
+}
+
+.capa-filme {
+    position: relative;
+    width: 150px;
+}
+
+img.filme {
+    width: 100%;
+    height: 220px;
+}
+
+.capa-filme .trash-svg {
+    position: absolute;
+    width: 28px;
+    top: 89%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.trash-svg:hover {
+    background-color: #da1e26;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 32px;
+}
+
+.titulo-filme {
+    margin: 0;
+    font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;
+    background-color: #0000006b;
+    font-size: 15px;
+    padding: 4px;
+}
+
+footer {
+    margin: 30px 0px;
+}
+
+footer > p {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+footer > p > svg {
+    width: 16px;
+    margin-right: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+footer > p > a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8em;
+    transition: 0.5s;
+}
+
+footer > p > a:hover {
+    color: #a30810;
+}

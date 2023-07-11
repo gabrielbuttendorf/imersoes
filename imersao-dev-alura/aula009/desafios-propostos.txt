@@ -1,0 +1,4 @@
+Desafios Aula 09
+
+- Terminar o layout do Figma [OK]
+- Colocar as Redes Sociais (com botões bonitos) [Deixei pro Gran Finale]

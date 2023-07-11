@@ -1,0 +1,7 @@
+Desafios Aula 06
+
+- Validar Vitórias/Empates/Derrotas [OK]
+- Colocar Troféuzinho ao lado do 1° lugar (ou ordenar lista) [OK]
+- Colocar Imagem [OK]
+- Botão para Zerar [OK]
+- Adicionar jogador [OK]

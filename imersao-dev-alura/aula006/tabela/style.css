@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #110711, #200a20) fixed;
+    margin: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 95vh;
+}
+
+.container {
+    background-color: #eed8ee;
+    padding: 16px;
+    border-radius: 10px;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: 80%;
+    max-width: 1000px;
+}
+
+.page-title {
+    color: #520052;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+    text-shadow: 0px 2px 2px #00000063;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form > p {
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.form > input {
+    padding: 8px;
+    font-size: 1em;
+    margin-bottom: 14px;
+    background-color: #504050;
+    color: #ffffff;
+}
+
+.form > button {
+    background-color: #520052;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 5px;
+    margin-bottom: 25px;
+}
+
+.form > p, .form > input, .form > button {
+    width: 90%;
+    max-width: 500px;
+    border: none;
+    border-radius: 4px;
+}
+
+.page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.div-table {
+    overflow-x: auto;
+    width: 80%;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th { color: #520052 }
+td { color: #504050 }
+
+.td-foto {
+    border: none; /* evitar borda duplicada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-foto {
+    width: 40px;
+    height: 40px;
+}
+
+th, tr, td {
+    border: 1px solid #928492;
+    text-align: center;
+    padding: 4px 6px;
+}
+
+table button {
+    padding: 6px 10px;
+    background-color: #520052;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+
+.div-zerar {
+    width: 80%;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.div-zerar button {
+    padding: 6px 10px;
+    background-color: #9e0f0f;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+
+button { transition: all 0.3s ease }
+
+.form > button:hover, table button:hover {
+    cursor: pointer;
+    background-color: #691269;
+}
+
+.div-zerar > button:hover {
+    cursor: pointer;
+    background-color: #b42626;
+}
+
+button:active {
+    transform: scale(96%);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .page-logo {
+    width: 200px;
+}
+
+footer > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer > p svg {
+    width: 22px;
+    height: auto;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+footer > p svg:hover {
+    cursor: pointer;
+    fill: #8f238f;
+    transform: scale(120%);
+}
+
+footer > p > a:hover { text-decoration: underline }
+
+/* adiciona emoji no líder da tabela*/
+.lider::before {
+    content: '\1F451';
+}
+
+@media screen and (max-width: 480px) {
+    .form > p, .form > input, .form > button {
+        width: 90%;
+    }
+
+    p, table, button, form > button {
+        font-size: 0.8em;
+    }
+
+    .div-zerar {
+        text-align: center;
+    }
+
+    footer .page-logo {
+        width: 140px;
+    }
+
+    .div-table {
+        width: 95%;
+    }
+    
+}
+  

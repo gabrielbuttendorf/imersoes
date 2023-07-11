@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    min-height: 854px;
+    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-07-super-trunfo-bg.png');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-bottom: 20vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.page-title {
+    color: #ffffff;
+    margin: 5px 0;
+}
+
+button {
+    padding: .8rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+button, input {
+    cursor: pointer;
+}
+
+h2 {
+    color: white;
+}
+
+#cartas {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#carta-jogador, #carta-computador {
+    width: 30vw;
+    height: 42vw;
+    max-width: 280px;
+    max-height: 400px;
+    overflow: auto;
+    border-radius: 10px;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgb(70, 47, 47);
+    background-color: #110e0e;
+}
+
+.carta-nome {
+    text-align: center;
+    color: #ffffff;
+}
+
+.carta-imagem {
+    width: 70%;
+    height: 160px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.opcoes, .opcoes-comp {
+    color: white;
+    text-align: left;
+    width: 90%;
+    padding-left: 10px;
+}
+
+.opcoes > input {
+    margin-bottom: 20px;
+}
+
+#resultado {
+    color: #ffffff;
+    font-size: 2em;
+    margin-top: 10px;
+}

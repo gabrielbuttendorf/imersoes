@@ -1,0 +1,10 @@
+Desafios Aula 05
+
+- Botão para remover filme [OK]
+- Colocar nome do filme [OK]
+- Além de imprimir na tela, guardar em uma lista [OK]
+
+Desafio Extra
+
+- Entender o Return [OK]
+- Entender o forEach [OK]

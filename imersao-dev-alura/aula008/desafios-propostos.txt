@@ -1,0 +1,5 @@
+Desafios Aula 08
+
+- Adicionar várias outras cartas (criar um Super Trunfo completo) [OK]
+- Passar a carta do adversário para o jogador que ganhar [OK]
+- Utilizar apenas uma variável para exibir as cartas. Passando (jogador ou computador pelo parâmetro) [OK]

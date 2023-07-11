@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --light01: #659BF7;
+    --light02: #1B6BF5;
+    --light03: #296ec2;
+
+    --dark01: #034596;
+    --dark02: #0459C2;
+    --dark03: #01224A;
+
+    --grey : #2f3a47;
+}
+
+body {
+    background: linear-gradient(180deg, var(--dark01), var(--dark03)) fixed;
+    font-family: 'Roboto Mono',monospace;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.page-title {
+    font-size: clamp(25px, 4vw, 50px);
+    color: #ffffff;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 70vw;
+    max-width: 1200px;
+    padding: 20px;
+
+    display: block;
+    text-align: center;
+    flex-direction: column;
+    
+    border-radius: 15px;
+    box-shadow: 0px 3px 7px #00000057;
+
+} 
+.page-subtitle {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.p-input {
+    margin: 14px 0px;
+}
+
+.input-nota {
+    font-size: 1em;
+    width: 218px;
+    padding: 5px 0px;
+    text-indent: 10px;
+}
+
+input[type="button"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+    margin-bottom: 20px;
+    padding: 6px 4px;
+    background-color: var(--light02);
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 3px solid black;
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+    background-color: #105de2;
+}
+
+.notas-inseridas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nota {
+    text-align: center;
+    background-color: #c0d7ff;
+    color: #000000;
+    font-weight: 600;
+    width: 25%;
+    padding: 4px 0px;
+    margin: 3px 0px;
+}
+
+.div-resultado {
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resultado {
+    width: 50%;
+    font-weight: 600;
+}
+
+footer {
+    margin: 20px 0px;
+}
+
+.imersao-logo {
+    width: 200px;
+}
+
+.alura-logo {
+    width: 65px;
+    padding: 5px;
+    background-color: black;
+}
+
+footer > .reload {
+    margin-top: 10px;
+}
+
+footer > .reload > a {
+    color: #ffffff;
+}
+
+
+@media screen and (max-width: 480px) {
+    /* deixando logo da imersão e da alura menor no celular */
+    .imersao-logo {
+        width: 160px;
+    }
+    
+    .alura-logo {
+        width: 49px;
+        padding: 5px;
+        background-color: black;
+    }
+
+    /* evitando quebra de linha na situação */
+    .resultado {
+        width: 85%;
+    }
+}
