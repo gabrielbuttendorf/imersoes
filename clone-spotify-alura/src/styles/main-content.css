@@ -273,8 +273,7 @@
     padding: 16px;
     position: relative;
     transition: background-color 0.3s ease;
-    width: 40%;
-    max-width: 270px;
+    width: 160px;
 }
 
 .artist-card:hover {

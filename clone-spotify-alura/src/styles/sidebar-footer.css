@@ -68,6 +68,7 @@ body {
 
 .library .library__button {
     display: flex;
+    align-items: center;
     margin-right: 10px;
     color: #b3b3b3;
     background-color: transparent;
