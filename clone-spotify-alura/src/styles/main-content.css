@@ -40,10 +40,6 @@
     cursor: pointer;
 }
 
-.header__login {
-    display: flex;
-    align-items: center;
-}
 
 .header__search {
     display: flex;
@@ -71,6 +67,11 @@
     overflow: hidden;
     white-space: nowrap;
     outline: none;
+}
+
+.header__login {
+    display: flex;
+    align-items: center;
 }
 
 .header__login .subscribe {
