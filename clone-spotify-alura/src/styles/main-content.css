@@ -1,5 +1,10 @@
-/* HEADER */
+/* MENU BURGER */
+.checkbox-menu {
+    display: none;
+}
+/* FIX - MENU BURGER */
 
+/* HEADER */
 .main-container {
     max-width: 80vw;
     /* height: 100vh; */

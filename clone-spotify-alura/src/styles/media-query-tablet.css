@@ -1,5 +1,5 @@
-/* MOBILE - UNTIL 450px */
-@media screen and (max-width: 450px) {
+/* MOBILE - 451px - 840px */
+@media screen and (max-width: 840px) {
     /* MENU BURGER */
     .menu-burger {
         position: fixed;
@@ -21,6 +21,7 @@
 
     .checkbox-menu {
         position: fixed;
+        display: block;
         left: 16px;
         top: 20px;
         width: 24px;
@@ -228,6 +229,10 @@
     }
 
     /* PLAYLISTS */
+    .offer__list-item {
+        grid-template-columns: 1fr 1fr;
+    }
+    
     .playlist-container {
         height: 86vh;
         background-color: #121212;
@@ -262,9 +267,4 @@
         width: 80px;
     }
     /* FIM - CARDS */
-}
-@media screen and (max-width: 1015px) {
-    .offer__list-item {
-        grid-template-columns: 1fr 1fr;
-    }
 }
