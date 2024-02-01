@@ -5,18 +5,14 @@
         position: fixed;
         left: 16px;
         top: 20px;
-        z-index: 10;
         width: 40px;
         height: 40px;
     }
     
     .menu-burger span {
-        display: block;
-        background-color: #fff;
         width: 24px;
         height: 3px;
         margin-bottom: 5px;
-        transition: all 0.2s ease;
     }
 
     .checkbox-menu {
@@ -31,83 +27,37 @@
         z-index: 11;
     }
 
-    .checkbox-menu:checked ~ .sidebar {
-        margin-left: 0px;
-    }
-    
-    .checkbox-menu:checked ~ .menu-burger .linha1 {
-        transform-origin: 0% 0%;
-        transform: rotate(45deg);
-    }
-    .checkbox-menu:checked ~ .menu-burger .linha2 {
-        opacity: 0;
-    }
-    .checkbox-menu:checked ~ .menu-burger .linha3 {
-        transform-origin: 0% 100%;
-        transform: rotate(-45deg);
-    }
     .checkbox-menu:checked ~ .menu-burger {
         left: 20px;
     }
     /* FIM - MENU BURGER */
 
     /* SIDEBAR */
-    .sidebar {
-        position: fixed;
-        padding: 0;
-        width: 40vw;
-        margin-left: -1000px;
-        z-index: 3;
-        transition: all 0.3s ease;
-    }
 
     .sidebar__navigation {
-        background-color: #121212;
-        border-radius: 0;
         padding: 32px 0 16px 16px;
     }
 
-    .sidebar__navigation .logo {
-        display: none;
-    }
-
     .sidebar nav ul li a {
-        color: #b3b3b3;
-        text-decoration: none;
         font-weight: 300;
         font-size: 12px;
     }
 
     .sidebar nav ul li a .fa {
         font-size: 16px;
-        margin-right: 5px;
     }
 
     .library {
-        height: 100vh;
-        display: flex;
-        justify-content: start;
-        border-radius: 0;
-        font-weight: 600;
-        margin-top: 0;
+        padding: 4px 8px;
     }
 
     .library .library__button {
-        margin-right: 0px;
-        color: #b3b3b3;
-        background-color: transparent;
-        border: 0;
         font-size: 12px;
         font-weight: 300;
-        text-align: center;
-        text-decoration: none;
-        text-transform: none;
-        padding: 20px 10px;
     }
 
     .library .library__button .fa-book {
         font-size: 16px;
-        margin-right: 5px;
     }
 
     .library .library__content .fa-plus {
@@ -124,32 +74,29 @@
     
 
     .section-playlist__content .title {
-        font-weight: 700;
         font-size: 12px;
     }
     
     .section-playlist__content .subtitle {
-        font-weight: 500;
         font-size: 10px;
     }
 
     .section-playlist__content .section-playlist__button {
         font-size: 11px;
-        font-weight: 700;
-        margin-top: 10px;
         width: 100px;
     }
 
     .sidebar .cookies {
-        margin: 18px 10px;
+        font-size: 10px;
+    }
+
+    .sidebar .cookies a {
+        font-size: 9px;
     }
 
     .languages .languages__button {
-        font-weight: bold;
         font-size: 10px;
         width: 130px;
-        padding: 8px 6px;
-        margin: 8px 2px;
     }
     /* FIM - SIDEBAR */
 
@@ -267,4 +214,46 @@
         width: 80px;
     }
     /* FIM - CARDS */
+}
+
+/* IPHONE 5 AND SIMILARS */
+@media screen and (max-width: 325px) {
+    .sidebar, .menu-burger {
+        position: absolute;
+    }
+
+    .checkbox-menu:checked ~ .sidebar ~ main {
+        position: fixed;
+    }
+
+    .header__search {
+        width: 150px;
+    }
+
+    .header__login .login {
+        width: 64px;
+        height: 28px;
+    }
+
+    .playlist-container {
+        height: 94vh;
+    }
+
+    footer {
+        z-index: 10;
+    }
+
+    .footer__text {
+        display: flex;
+        align-items: center;
+    }
+
+    .footer__text .title {
+        font-size: 10px;
+    }
+
+    .footer__div-button .footer__button {
+        padding: 8px 10px;
+        font-size: 11px;
+    }
 }
