@@ -9,8 +9,8 @@ Clone da página inicial do Spotify com algumas alterações, desenvolvido duran
 <div>
     <img width="640px" height="450px" src="src/assets/images(readme)/desktop.png" alt="Desktop Layout" style="display-inline-block;">
     <br>
-    <img width="320px" height="400px" src="src/assets/images(readme)/mobile.png" alt="Mobile Layout" style="display-inline-block;">
-    <img width="320px" height="400px" src="src/assets/images(readme)/lateral-menu.png" alt="Lateral Menu" style="display-inline-block;">
+    <img width="320px" height="600px" src="src/assets/images(readme)/mobile.png" alt="Mobile Layout" style="display-inline-block;">
+    <img width="320px" height="600px" src="src/assets/images(readme)/lateral-menu.png" alt="Lateral Menu" style="display-inline-block;">
 </div>
 
 ### Tecnologia Utilizadas
