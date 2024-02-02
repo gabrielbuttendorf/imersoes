@@ -183,6 +183,13 @@
         width: 80px;
     }
     /* FIM - CARDS */
+
+    /* CARD ARTISTA */
+    .artist-card {
+        top: 76px;
+        left: 20px;
+    }
+    /* FIM - CARD ARTISTA */
 }
 
 /* IPHONE 5 AND SIMILARS */
