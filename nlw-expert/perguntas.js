@@ -340,6 +340,24 @@ const perguntasJs = [
             "undefined"
         ],
         correta: 0
+    },
+    {
+        pergunta: "Qual é o método utilizado para converter uma string em letras maiúsculas em JavaScript?",
+        respostas: [
+            "toUpperCase()",
+            "toUpper()",
+            "upperCase()"
+        ],
+        correta: 0
+    },
+    {
+        pergunta: "Qual é a saída do código: console.log(typeof null);",
+        respostas: [
+            "'null'",
+            "'object'",
+            "'undefined'"
+        ],
+        correta: 1
     }
 ]
 
@@ -685,6 +703,24 @@ const perguntasPython = [
             "Fechar um arquivo."
         ],
         correta: 1
+    },
+    {
+        pergunta: "O que é um método mágico em Python?",
+        respostas: [
+            "Um método que realiza operações matemáticas complexas.",
+            "Um método que pode ser chamado diretamente pelo usuário.",
+            "Um método com um nome especial precedido e seguido por duplo sublinhado (__)."
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "Qual é a diferença entre aspas simples ('') e duplas (\"\") ao definir uma string em Python?",
+        respostas: [
+            "Não há diferença, ambas são usadas para definir strings.",
+            "As aspas duplas são usadas para strings de várias linhas e as aspas simples para strings simples.",
+            "As aspas simples são usadas para strings de várias linhas e as aspas duplas para strings simples."
+        ],
+        correta: 0
     }
 ]
 
@@ -1010,6 +1046,42 @@ const perguntasCss = [
             "border-width",
             "border-style",
             "border-color"
+        ],
+        correta: 0
+    },
+    {
+        pergunta: "Qual é a função da propriedade 'box-sizing' em CSS?",
+        respostas: [
+            "Define o modelo de caixa padrão para todos os elementos.",
+            "Define como os elementos são posicionados em relação ao elemento pai.",
+            "Define como o conteúdo, padding e borda são calculados em relação à largura e altura do elemento."
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "Como é possível centralizar um elemento horizontalmente em CSS?",
+        respostas: [
+            "Usando a propriedade 'text-align' com o valor 'center'.",
+            "Usando a propriedade 'vertical-align' com o valor 'center'.",
+            "Usando a propriedade 'margin' com os valores 'auto' e '0'."
+        ],
+        correta: 2
+    },
+    {
+        pergunta: "Qual é a diferença entre 'display: inline' e 'display: block' em CSS?",
+        respostas: [
+            "Inline exibe o elemento em uma linha enquanto block o exibe em uma nova linha.",
+            "Inline cria um bloco de tamanho fixo enquanto block permite o ajuste automático do tamanho.",
+            "Inline permite ajustar a largura e altura do elemento manualmente enquanto block não."
+        ],
+        correta: 0
+    },
+    {
+        pergunta: "O que é o 'box-shadow' em CSS?",
+        respostas: [
+            "Uma propriedade que define a sombra projetada por um elemento.",
+            "Uma propriedade que define a borda de um elemento.",
+            "Uma propriedade que define a cor de fundo de um elemento."
         ],
         correta: 0
     }
