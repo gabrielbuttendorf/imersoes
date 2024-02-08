@@ -132,3 +132,4 @@ for(const item of perguntas) {
     //adicionando o elemento dentro da div .quiz
     quiz.appendChild(quizItem)
 }
+
