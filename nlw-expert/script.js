@@ -1,5 +1,5 @@
 let perguntas = []
-let temaPerguntas
+let temaPerguntas = []
 
 const selectedButton = document.querySelectorAll('.choice-language button')
 for (let button of selectedButton) {
@@ -16,7 +16,7 @@ for (let button of selectedButton) {
                 temaPerguntas = perguntasCss
                 break
             case 'mixed':
-                temaPerguntas = 'mixed'
+                temaPerguntas = perguntasJs.concat(perguntasPython, perguntasCss)
                 break
         }
         raffle(temaPerguntas)
@@ -24,60 +24,16 @@ for (let button of selectedButton) {
 }
 
 function raffle(temaPerguntas) {
+    perguntas = []
     const raffleNumbers = new Set()
+    const totalListQuestions = temaPerguntas.length
 
-    /* ------- Caso o usuário escolha o tema misto ------- */
-    if (temaPerguntas === 'mixed') {
-        while (raffleNumbers.size < 12) {
-            if (raffleNumbers.size < 12) {
-                let number = Math.round(Math.random() * 39)
-                if (!raffleNumbers.has(number)) {
-                    perguntas.push(perguntasJs[number])
-                    raffleNumbers.add(number)
-                } else {
-                    while (!raffleNumbers.has(number)) {
-                        perguntas.push(perguntasJs[number])
-                        raffleNumbers.add(number)
-                    }
-                }
-            }
-    
-            if (raffleNumbers.size < 12) {
-                let number = Math.round(Math.random() * 39)
-                if (!raffleNumbers.has(number)) {
-                    perguntas.push(perguntasPython[number])
-                    raffleNumbers.add(number)
-                } else {
-                    while (!raffleNumbers.has(number)) {
-                        perguntas.push(perguntasPython[number])
-                        raffleNumbers.add(number)
-                    }
-                }
-            }
-    
-            if (raffleNumbers.size < 12) {
-                let number = Math.round(Math.random() * 39)
-                if (!raffleNumbers.has(number)) {
-                    perguntas.push(perguntasCss[number])
-                    raffleNumbers.add(number)
-                } else {
-                    while (!raffleNumbers.has(number)) {
-                        perguntas.push(perguntasCss[number])
-                        raffleNumbers.add(number)
-                    }
-                }
-            }
-        }
-        /* ------- Caso o usuário escolha o tema misto ------- */
+    while (raffleNumbers.size < 10) {
+        let number = Math.round(Math.random() * (totalListQuestions - 1))
 
-    } else {
-        while (raffleNumbers.size < 10) {
-            let number = Math.round(Math.random() * 39)
-    
-            if (!raffleNumbers.has(number)) {
-                perguntas.push(temaPerguntas[number])
-                raffleNumbers.add(number)
-            }
+        if (!raffleNumbers.has(number)) {
+            perguntas.push(temaPerguntas[number])
+            raffleNumbers.add(number)
         }
     }
 
@@ -91,6 +47,7 @@ function teste() {
     mostrarTotal.textContent = corretas.size + ' de ' + totalDePerguntas
     
     const quiz = document.querySelector('#quiz')
+    quiz.innerHTML = ''
     const template = document.querySelector('template')
     
     for(const item of perguntas) {

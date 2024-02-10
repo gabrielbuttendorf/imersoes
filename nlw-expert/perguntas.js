@@ -183,7 +183,7 @@ const perguntasJs = [
         pergunta: "Qual é a saída do código: console.log('Hello ' + 'World');",
         respostas: [
             "'HelloWorld'",
-            "Hello World",
+            "HelloWorld",
             "NaN"
         ],
         correta: 1

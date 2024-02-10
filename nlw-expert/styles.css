@@ -39,6 +39,46 @@ header h1 {
     margin-top: 24px;
 }
 
+.choice-language {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 24px;
+    width: 100%;
+}
+
+.choice-language p {
+    color: #566880;
+    font-size: 1.6rem;
+}
+
+.choice-language__button {
+    display: flex;
+
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.choice-language__button button {
+    flex-grow: 1;
+
+    padding: 12px 2px;
+    background-color: transparent;
+    color: #F1F5F9;
+    border: 1px solid #384454;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    
+    transition: all 0.2s ease;
+}
+
+.choice-language__button button:hover {
+    border: 1px solid #A3E635;
+    color: #A3E635;
+}
+
 #quiz {
     counter-reset: quiz-item;
 }
@@ -102,6 +142,7 @@ input {
     width: 16px;
     height: 16px;
     border-radius: 50%;
+    cursor: pointer;
     transition: all 0.2s ease;
 
     display: flex;
