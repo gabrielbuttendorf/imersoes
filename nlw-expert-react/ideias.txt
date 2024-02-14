@@ -1,4 +1,3 @@
-Resetar 'adicionar nota' clicando no X;
 Customizar Sonner;
 Acessar botão de adicionar nota com tab;
 Fazer aparecer que não foi possível criar a nota caso esteja vazia;
