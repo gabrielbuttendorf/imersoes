@@ -26,6 +26,14 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
     }
   }
 
+  function handleSaveNoteWithEnter(event: React.KeyboardEvent<HTMLTextAreaElement>) {
+    if (!shouldShowOnboarding) {
+      if (event.key == 'Enter') {
+        handleSaveNote(event)
+      }
+    }
+  }
+
   function handleSaveNote(event: FormEvent) {
     event.preventDefault()
 
@@ -117,6 +125,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
                 <textarea 
                   autoFocus
                   onChange={handleContentChanged}
+                  onKeyDown={handleSaveNoteWithEnter}
                   className='text-sm leading-6 text-slate-400 bg-transparent resize-none flex-1 outline-none'
                   value={content}
                 />
@@ -136,7 +145,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
               <button 
                 onClick={handleSaveNote} 
                 type="button"
-                className='w-full bg-lime-400 py-4 text-center text-sm text-lime-950 outline-none font-medium hover:bg-lime-500 transition duration-100 ease-in-out'
+                className='w-full bg-lime-400 py-4 text-center text-sm text-lime-950 outline-none font-medium hover:bg-lime-500 focus-visible:bg-lime-500 hover:transition hover:duration-100 hover:ease-in-out'
               >
                 Salvar nota
               </button>
