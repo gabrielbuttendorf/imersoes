@@ -1,2 +1,0 @@
-Customizar Sonner;
-Fazer aparecer que não foi possível criar a nota caso esteja vazia;

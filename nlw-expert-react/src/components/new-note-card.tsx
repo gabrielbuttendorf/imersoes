@@ -1,5 +1,4 @@
 import * as Dialog from '@radix-ui/react-dialog'
-import { tr } from 'date-fns/locale'
 import { X } from 'lucide-react'
 import { ChangeEvent, FormEvent, useState } from 'react'
 import { toast } from 'sonner'
@@ -38,6 +37,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
     event.preventDefault()
 
     if (content === '') {
+      toast.error('Não é possível criar uma nota em branco!')
       return
     }
 
@@ -45,7 +45,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 
     setContent('')
     setShouldShowOnboarding(true)
-    
+
     toast.success('Nota criada com sucesso!')
   }
 
