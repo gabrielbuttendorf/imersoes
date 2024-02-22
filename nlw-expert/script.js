@@ -37,10 +37,10 @@ function raffle(temaPerguntas) {
         }
     }
 
-    teste()
+    showQuestions()
 }
 
-function teste() {
+function showQuestions() {
     const corretas = new Set()
     const totalDePerguntas = perguntas.length
     const mostrarTotal = document.querySelector('#acertos span')
@@ -59,16 +59,29 @@ function teste() {
         for(let resposta of item.respostas) {
             //clonando os <dt>
             const dt = quizItem.querySelector('dl dt').cloneNode(true)
+
             //atribuindo a cada resposta para um span
             dt.querySelector('span').textContent = resposta
             dt.querySelector('input').setAttribute('name', 'pergunta-' + perguntas.indexOf(item))
             dt.querySelector('input').value = item.respostas.indexOf(resposta)
             dt.querySelector('input').onchange = (event) => {
                 const estaCorreta = event.target.value == item.correta
+
+                const dtSpan = dt.querySelector('span')
+                const dtInput = dt.querySelector('input')
+                const dtInputChecked = dt.querySelector('input:checked')
     
                 corretas.delete(item)
                 if(estaCorreta) {
                     corretas.add(item)
+                    dtSpan.style.color = '#A3E635'
+                    dtInputChecked.style.borderColor = '#A3E635'
+                    dtInputChecked.classList.add('right-checked');
+                } else {
+                    dtInput.style.animation = 'shake 0.125s'
+                    dtSpan.style.color = '#E63535'
+                    dtInputChecked.style.borderColor = '#E63535'
+                    dtInputChecked.classList.add('wrong-checked');
                 }
     
                 mostrarTotal.textContent = corretas.size + ' de ' + totalDePerguntas
