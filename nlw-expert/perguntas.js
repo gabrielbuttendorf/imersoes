@@ -21,7 +21,7 @@ const perguntasJs = [
         pergunta: "Qual palavra-chave é utilizada para declarar uma variável em JavaScript?",
         respostas: [
             "let",
-            "var",
+            "variable",
             "const"
         ],
         correta: 0
@@ -58,7 +58,7 @@ const perguntasJs = [
         respostas: [
             "parseInt()",
             "toString()",
-            "parseFloat()"
+            "stringToInt()"
         ],
         correta: 0
     },
@@ -183,7 +183,7 @@ const perguntasJs = [
         pergunta: "Qual é a saída do código: console.log('Hello ' + 'World');",
         respostas: [
             "'HelloWorld'",
-            "HelloWorld",
+            "Hello World",
             "NaN"
         ],
         correta: 1
@@ -225,7 +225,7 @@ const perguntasJs = [
         correta: 0
     },
     {
-        pergunta: "Qual função é utilizada para converter um número em um número com um número específico de casas decimais em JavaScript?",
+        pergunta: "Qual função é utilizada para converter um número em um número com um tanto específico de casas decimais em JavaScript?",
         respostas: [
             "toFixed()",
             "toPrecision()",
@@ -308,8 +308,8 @@ const perguntasJs = [
     {
         pergunta: "Qual é a saída do código: console.log('hello'.toUpperCase());",
         respostas: [
-            "'hello'",
-            "'HELLO'",
+            "hello",
+            "Hello",
             "HELLO"
         ],
         correta: 1
