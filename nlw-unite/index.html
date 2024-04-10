@@ -17,7 +17,7 @@
     <form action="">
       <input type="text" name="full-name" id="full-name" placeholder="Nome completo">
       <input type="email" name="email" id="email" placeholder="E-mail">
-      <button class="register">Realizar Inscrição</button>
+      <button type="button" class="register" onclick="addAttendee()">Realizar Inscrição</button>
     </form>
   </div>
   <div class="horizontal-bar"></div>
@@ -34,14 +34,16 @@
           </tr>
         </thead>
         <tbody>
-          <td>
-            <div class="name-email">
-              <span>Diego Fernandes</span>
-              <span>diegofernandes@gmail.com</span>
-            </div>
-          </td>
-          <td>há 3 dias</td>
-          <td>há 3 minutos</td>
+          <tr>
+            <td>
+              <div class="name-email">
+                <span class="attendee-name">Diego Fernandes</span>
+                <span class="attendee-email">diegofernandes@gmail.com</span>
+              </div>
+            </td>
+            <td class="attendee-register-at">há 3 dias</td>
+            <td class="attendee-check-in">há 3 minutos</td>
+          </tr>
         </tbody>
       </table>
     </div>

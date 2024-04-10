@@ -35,6 +35,8 @@ form {
 table {
   border: 1px solid orange;
   text-align: left;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .name-email {
