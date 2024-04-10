@@ -1,24 +1,26 @@
-const attendee = {
-  name: "Gabriel Felipe",
-  email: "bielfelipe@gmail.com",
-  registerAt: "01/04/2024",
-  checkIn: "04/04/2024"
-}
+const today = dayjs() /* ARRUMAR DAYJS */
 
 function addAttendee() {
   const tableBody = document.querySelector('tbody')
   const attendeeRow = tableBody.firstElementChild
+  
+  const newAttendeeName = document.getElementById('full-name').value
+  const newAttendeeEmail = document.getElementById('email').value
+
+  // console.log(today.to(dayjs('1990-01-01'))) /* ARRUMAR DAYJS */
+
+  // const newAttendeeRegisterAt = date
   const newAttendee = attendeeRow.cloneNode(true)
 
-  const attendeName = newAttendee.querySelector('.attendee-name')
-  const attendeEmail = newAttendee.querySelector('.attendee-email')
-  const attendeRegisterAt = newAttendee.querySelector('.attendee-register-at')
-  const attendeCheckIn = newAttendee.querySelector('.attendee-check-in')
+  const attendeNameElement = newAttendee.querySelector('.attendee-name')
+  const attendeEmailElement = newAttendee.querySelector('.attendee-email')
+  const attendeRegisterAtElement = newAttendee.querySelector('.attendee-register-at')
+  const attendeCheckInElement = newAttendee.querySelector('.attendee-check-in')
   
-  attendeName.textContent = attendee.name
-  attendeEmail.textContent = attendee.email
-  attendeRegisterAt.textContent = attendee.registerAt
-  attendeCheckIn.textContent = attendee.checkIn
+  attendeNameElement.textContent = newAttendeeName
+  attendeEmailElement.textContent = newAttendeeEmail
+  // attendeRegisterAtElement.textContent = newAttendeeRegisterAt
+  // attendeCheckInElement.textContent = attendee.checkIn
   
   tableBody.appendChild(newAttendee)
 }
