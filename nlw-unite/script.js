@@ -10,8 +10,9 @@ document.getElementById('register-button').addEventListener('click', () => {
 function isNameOrEmailEmpty() {
   const nameInput = document.getElementById('full-name').value.trim()
   const emailInput = document.getElementById('email').value.trim()
+  const emailRegex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/
   
-  if (nameInput === '' || emailInput === '' || !emailInput.includes('@')) {
+  if (nameInput === '' || !emailRegex.test(emailInput)) {
     return
   }
 
