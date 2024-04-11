@@ -1,17 +1,30 @@
 dayjs.extend(window.dayjs_plugin_relativeTime);
 dayjs.locale('pt-br')
 
-function addAttendee() {
-  if (isNameOrEmailEmpty) {
-    alert('Nome e E-mail precisam ser preenchidos.')
+document.getElementById('register-button').addEventListener('click', () => {
+  const isNameAndEmailValid = isNameOrEmailEmpty()
+
+  isNameAndEmailValid ? addAttendee() : alert('Nome e e-mail precisam ser preenchidos corretamente.')
+})
+
+function isNameOrEmailEmpty() {
+  const nameInput = document.getElementById('full-name').value.trim()
+  const emailInput = document.getElementById('email').value.trim()
+  
+  if (nameInput === '' || emailInput === '' || !emailInput.includes('@')) {
     return
   }
 
+  nameInput
+  return true
+}
+
+function addAttendee() {
   const tableBody = document.querySelector('tbody')
   const attendeeRow = tableBody.firstElementChild
   
-  const newAttendeeName = document.getElementById('full-name').value
-  const newAttendeeEmail = document.getElementById('email').value
+  const newAttendeeName = document.getElementById('full-name')
+  const newAttendeeEmail = document.getElementById('email')
 
   const newAttendeeRegisterAt = dayjs(randomDate()).fromNow()
   const newAttendee = attendeeRow.cloneNode(true)
@@ -21,25 +34,20 @@ function addAttendee() {
   const attendeRegisterAtElement = newAttendee.querySelector('.attendee-register-at')
   const attendeCheckInElement = newAttendee.querySelector('.attendee-check-in .confirm-check-in')
   
-  attendeNameElement.textContent = newAttendeeName
-  attendeEmailElement.textContent = newAttendeeEmail
+  attendeNameElement.textContent = newAttendeeName.value
+  attendeEmailElement.textContent = newAttendeeEmail.value
   attendeRegisterAtElement.textContent = newAttendeeRegisterAt
   attendeCheckInElement.textContent = 'Confirmar check-in'
   
   tableBody.appendChild(newAttendee)
+  newAttendeeName.value = ''
+  newAttendeeEmail.value = ''
   
   function randomDate() {
     const startDate = new Date('2024-03-01')
     const endDate = new Date()
 
     return new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()))
-  }
-
-  function isNameOrEmailEmpty() {
-    const nameInput = document.getElementById('full-name')
-    const emailInput = document.getElementById('email')
-    
-    return nameInput.value.trim() === '' || emailInput.value.trim() === ''
   }
 }
 
