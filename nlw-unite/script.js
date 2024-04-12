@@ -39,6 +39,7 @@ function addAttendee() {
   attendeEmailElement.textContent = newAttendeeEmail.value
   attendeRegisterAtElement.textContent = newAttendeeRegisterAt
   attendeCheckInElement.textContent = 'Confirmar check-in'
+  attendeCheckInElement.disabled = false
   
   tableBody.appendChild(newAttendee)
   newAttendeeName.value = ''
@@ -56,5 +57,6 @@ const tableBody = document.querySelector('tbody')
 tableBody.addEventListener('click', (event) => {
   if (event.target.classList.contains('confirm-check-in')) {
     event.target.textContent = 'Check-in confirmado'
+    event.target.disabled = true
   }
 })

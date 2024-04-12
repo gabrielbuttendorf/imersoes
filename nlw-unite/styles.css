@@ -2,6 +2,9 @@
 
 :root {
   --roboto: 'Roboto', 'sans-serif';
+  --line-grey: hsla(0, 0%, 100%, 0.10);
+  --light-grey: #C4C4CC;
+  --emerald: #9FF9CC;
 }
 
 * {
@@ -37,10 +40,11 @@ body {
   flex-direction: column;
 }
 
-.form-title {
+.form-title, .table-title {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 16px;
+  color: #E1E1E6;
 }
 
 form {
@@ -68,7 +72,7 @@ form input {
 
 form .input:focus-within {
   outline: none;
-  border: 1px solid #9FF9CC;
+  border: 1px solid var(--emerald);
 }
 
 /* Evitar mudança de cor ao utilizar autocomplete nos inputs */
@@ -97,11 +101,57 @@ form #register-button:focus {
   flex-direction: column;
 }
 
+.table-border {
+  border: 1px solid var(--line-grey);
+  border-radius: 10px;
+}
+
 table {
-  border: 1px solid orange;
   text-align: left;
   width: 100%;
   border-collapse: collapse;
+  color: #fff;
+}
+
+table th {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+table td {
+  border-top: 1px solid var(--line-grey);
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--light-grey);
+}
+
+table .attendee-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+table .attendee-email {
+  color: var(--light-grey);
+  font-size: 12px;
+}
+
+table .confirm-check-in {
+  background-color: transparent;
+  color: var(--emerald);
+  text-align: left;
+  border: 0;
+  cursor: pointer;
+}
+
+table .confirm-check-in:disabled {
+  color: var(--light-grey);
+  cursor: default;
+}
+
+table .smaller-col {
+  width: 25%;
 }
 
 .name-email {
@@ -110,11 +160,7 @@ table {
 }
 
 .table-border {
-  overflow-x: scroll;
-}
-
-td, th {
-  min-width: 200px;
+  overflow-x: auto;
 }
 
 @media screen and (max-width: 690px) {
@@ -143,8 +189,10 @@ html {
   height: 10px;
   width: 10px;
   background-color: hsla(0, 0%, 100%, 0.10);
+  border-radius: 12px;
 }
-
+ 
 ::-webkit-scrollbar-thumb {
   background-color: hsla(0, 0%, 100%, 0.20);
+  border-radius: 12px;
 }
