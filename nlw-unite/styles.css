@@ -1,20 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --roboto: 'Roboto', 'sans-serif';
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background-color: #121214;
   color: #fff;
-  padding: 20px; /*ajustar depois*/
+  padding: 32px;
+  font-family: var(--roboto);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .horizontal-bar {
   width: 100%;
   height: 2px;
   background-color: hsla(0, 0%, 100%, 0.10);
-  margin: 24px 0; /*ajustar depois*/
+  margin: 20px 0;
 }
 
 .form-container {
@@ -22,9 +37,59 @@ body {
   flex-direction: column;
 }
 
+.form-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
 form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+form .input {
   display: flex;
-  gap: 10px; /*ajustar depois*/
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  border: 1px solid hsla(0, 0%, 100%, 0.10);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+form input {
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+form .input:focus-within {
+  outline: none;
+  border: 1px solid #9FF9CC;
+}
+
+/* Evitar mudança de cor ao utilizar autocomplete nos inputs */
+form input:-webkit-autofill {-webkit-box-shadow: 0 0 0 30px #121214 inset !important }
+form input:-webkit-autofill { -webkit-text-fill-color: #fff !important }
+
+form #register-button {
+  width: 100%;
+  background-color: #F48F56;
+  color: #00292E;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+form #register-button:focus {
+  outline: 1px solid #ffbd96;
 }
 
 .table-container {
@@ -42,4 +107,44 @@ table {
 .name-email {
   display: flex;
   flex-direction: column;
+}
+
+.table-border {
+  overflow-x: scroll;
+}
+
+td, th {
+  min-width: 200px;
+}
+
+@media screen and (max-width: 690px) {
+  form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  form #register-button {
+    grid-column: 1 / -1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* SCROLLBAR */
+html {
+  scrollbar-width: 10px;
+  scrollbar-color:  hsla(0, 0%, 100%, 0.10), hsla(0, 0%, 100%, 0.20);
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background-color: hsla(0, 0%, 100%, 0.10);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(0, 0%, 100%, 0.20);
 }

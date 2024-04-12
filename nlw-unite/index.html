@@ -7,45 +7,53 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="./assets/nlw-logo.svg" alt="Logo NLW">
-  </header>
-  <div class="horizontal-bar"></div>
+  <div class="container">
+    <header>
+      <img src="./assets/nlw-logo.svg" alt="Logo NLW">
+    </header>
+    <div class="horizontal-bar"></div>
+    
+    <div class="form-container">
+      <p class="form-title">Inscrição</p>
+      <form action="">
+        <div class="input">
+          <img src="assets/user-icon.svg" alt="user icon">
+          <input type="text" name="full-name" id="full-name" placeholder="Nome completo">
+        </div>
+        <div class="input">
+          <img src="assets/at-sign.svg" alt="at sign icon">
+          <input type="email" name="email" id="email" placeholder="E-mail">
+        </div>
+        <button type="button" id="register-button">Realizar Inscrição</button>
+      </form>
+    </div>
+    <div class="horizontal-bar"></div>
   
-  <div class="form-container">
-    <p class="form-title">Inscrição</p>
-    <form action="">
-      <input type="text" name="full-name" id="full-name" placeholder="Nome completo">
-      <input type="email" name="email" id="email" placeholder="E-mail">
-      <button type="button" id="register-button">Realizar Inscrição</button>
-    </form>
-  </div>
-  <div class="horizontal-bar"></div>
-
-  <div class="table-container">
-    <p class="table-title">Participantes</p>
-    <div class="table-border">
-      <table>
-        <thead>
-          <tr>
-            <th>Participante</th>
-            <th>Data da Inscrição</th>
-            <th>Check-in</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div class="name-email">
-                <span class="attendee-name">Diego Fernandes</span>
-                <span class="attendee-email">diegofernandes@gmail.com</span>
-              </div>
-            </td>
-            <td class="attendee-register-at">há 7 dias</td>
-            <td class="attendee-check-in"><button class="confirm-check-in">Confirmar check-in</button></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="table-container">
+      <p class="table-title">Participantes</p>
+      <div class="table-border">
+        <table>
+          <thead>
+            <tr>
+              <th>Participante</th>
+              <th>Data da Inscrição</th>
+              <th>Check-in</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="name-email">
+                  <span class="attendee-name">Diego Fernandes</span>
+                  <span class="attendee-email">diegofernandes@gmail.com</span>
+                </div>
+              </td>
+              <td class="attendee-register-at">há 7 dias</td>
+              <td class="attendee-check-in"><button class="confirm-check-in">Confirmar check-in</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
