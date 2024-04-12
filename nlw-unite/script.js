@@ -5,6 +5,8 @@ document.getElementById('register-button').addEventListener('click', () => {
   const isNameAndEmailValid = isNameOrEmailEmpty()
 
   isNameAndEmailValid ? addAttendee() : alert('Nome e e-mail precisam ser preenchidos corretamente.')
+
+  document.getElementById('full-name').focus()
 })
 
 function isNameOrEmailEmpty() {
@@ -44,6 +46,7 @@ function addAttendee() {
   tableBody.appendChild(newAttendee)
   newAttendeeName.value = ''
   newAttendeeEmail.value = ''
+  newAttendeeName.focus()
   
   function randomDate() {
     const startDate = new Date('2024-03-01')
