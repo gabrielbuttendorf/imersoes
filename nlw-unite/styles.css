@@ -68,6 +68,7 @@ form input {
   color: #fff;
   outline: none;
   border: none;
+  width: 100%;
 }
 
 form .input:focus-within {
@@ -191,7 +192,7 @@ html {
   background-color: hsla(0, 0%, 100%, 0.10);
   border-radius: 12px;
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background-color: hsla(0, 0%, 100%, 0.20);
   border-radius: 12px;
